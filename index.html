@@ -95,7 +95,11 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
-    .content-section { max-width: 900px; animation: fadein 0.3s ease-in; display: none; }
+    .content-section { 
+      max-width: 900px; 
+      animation: fadein 0.3s ease-in; 
+      display: none;
+    }
     .content-section p, .content-section li { line-height: 1.6; }
     @keyframes fadein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -114,10 +118,16 @@
       flex-wrap: wrap;
     }
 
-    .profile-card img { border-radius: 6px; object-fit: cover; border: 1px solid var(--border); }
     @media (max-width: 900px) {.profile-card img { width: 160px; } }
-    .profile-links a { margin-right: 1rem; text-decoration: none; color: var(--accent); font-weight: 500; }
     .profile-links a:hover { text-decoration: underline; }
+    .profile-links a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .profile-links p a + a {
+      margin-left: 1rem;
+    }
 
     .profile-extra { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
 
@@ -166,60 +176,60 @@
 </header>
 
 <div class="container">
-<nav>
-  <ul>
-    <li><strong>HOME</strong>
-      <ul class="dropdown-container">
-        <li><button onclick="showSection('home-content', this)">About</button></li>
-        <li><button onclick="showSection('codeofconduct', this)">Code of conduct</button></li>
-      </ul>
-    </li>
+  <nav>
+    <ul>
+      <li><strong>HOME</strong>
+        <ul class="dropdown-container">
+          <li><button onclick="showSection('home-content', this)">About</button></li>
+          <li><button onclick="showSection('codeofconduct', this)">Code of conduct</button></li>
+        </ul>
+      </li>
 
-    <li><strong>PROJECTS</strong>
-      <ul class="dropdown-container">
-        <li><button onclick="showSection('bcubed', this)">B-Cubed</button></li>
-        <li><button onclick="showSection('caspianII', this)">CASPIAN II</button></li>
-        <li><button onclick="showSection('bioimpact', this)">BioImpact</button></li>
-        <li><button onclick="showSection('predictivealiens', this)">PredictiveAliens</button></li>
-        <li><button onclick="showSection('robusttrends', this)">RobustTrends</button></li>
-        <li><button onclick="showSection('finished', this)">FINISHED</button></li>
-      </ul>
-    </li>
+      <li><strong>PROJECTS</strong>
+        <ul class="dropdown-container">
+          <li><button onclick="showSection('bcubed', this)">B-Cubed</button></li>
+          <li><button onclick="showSection('caspianII', this)">CASPIAN II</button></li>
+          <li><button onclick="showSection('bioimpact', this)">BioImpact</button></li>
+          <li><button onclick="showSection('predictivealiens', this)">PredictiveAliens</button></li>
+          <li><button onclick="showSection('robusttrends', this)">RobustTrends</button></li>
+          <li><button onclick="showSection('finished', this)">FINISHED</button></li>
+        </ul>
+      </li>
 
-    <li><strong>GROUP MEMBERS</strong>
-      <ul class="dropdown-container">
-        <li><button onclick="showSection('hanno', this)">Hanno Seebens, Prof</button></li>
-        <li><button onclick="showSection('manuela', this)">Manuela Goméz-Suárez</button></li>
-        <li><button onclick="showSection('philipp', this)">Philipp Laeseke, Dr</button></li>
-        <li><button onclick="showSection('shawn', this)">Shawn Dove, PhD</button></li>
-        <li><button onclick="showSection('tanara', this)">Tanara Renard</button></li>
-        <li><button onclick="showSection('yanina', this)">Yanina Sica, PhD</button></li>
-        <li><button onclick="showSection('alumni', this)">ALUMNI</button></li>
-      </ul>
-    </li>
+      <li><strong>GROUP MEMBERS</strong>
+        <ul class="dropdown-container">
+          <li><button onclick="showSection('hanno', this)">Hanno Seebens, Prof</button></li>
+          <li><button onclick="showSection('manuela', this)">Manuela Goméz-Suárez</button></li>
+          <li><button onclick="showSection('philipp', this)">Philipp Laeseke, Dr</button></li>
+          <li><button onclick="showSection('shawn', this)">Shawn Dove, PhD</button></li>
+          <li><button onclick="showSection('tanara', this)">Tanara Renard</button></li>
+          <li><button onclick="showSection('yanina', this)">Yanina Sica, PhD</button></li>
+          <li><button onclick="showSection('alumni', this)">ALUMNI</button></li>
+        </ul>
+      </li>
 
-    <li><strong>PUBLICATIONS</strong>
-      <ul class="dropdown-container">
-        <li><button onclick="showSection('publications', this)">View Publications</button></li>
-      </ul>
-    </li>
+      <li><strong>PUBLICATIONS</strong>
+        <ul class="dropdown-container">
+          <li><button onclick="showSection('publications', this)">View Publications</button></li>
+        </ul>
+      </li>
 
-    <li><strong>DATASETS/WORKFLOWS</strong>
-      <ul class="dropdown-container">
-        <li><button onclick="showSection('sinas', this)">SInAS</button></li>
-        <li><button onclick="showSection('firstrecords', this)">FirstRecords</button></li>
-        <li><button onclick="showSection('dasco', this)">DASCO</button></li>
-      </ul>
-    </li>
+      <li><strong>DATASETS/WORKFLOWS</strong>
+        <ul class="dropdown-container">
+          <li><button onclick="showSection('sinas', this)">SInAS</button></li>
+          <li><button onclick="showSection('firstrecords', this)">FirstRecords</button></li>
+          <li><button onclick="showSection('dasco', this)">DASCO</button></li>
+        </ul>
+      </li>
 
-    <li><strong>LEGAL</strong>
-      <ul class="dropdown-container">
-        <li><button onclick="showSection('impressum', this)">Impressum</button></li>
-        <li><button onclick="showSection('datenschutz', this)">Datenschutz</button></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+      <li><strong>LEGAL</strong>
+        <ul class="dropdown-container">
+          <li><button onclick="showSection('impressum', this)">Impressum</button></li>
+          <li><button onclick="showSection('datenschutz', this)">Datenschutz</button></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
   <main>
     <section id="home-content" class="content-section" style="display:block;">
@@ -227,7 +237,17 @@
       <div class="profile-card">
         <div>
           <div class="profile-links">
-            <p>Welcome to the website of the <strong>Ecological Informatics group</strong>. Our focus is on ecological informatics, biodiversity research, and applied environmental studies.</p>
+            <p>Welcome to the website of the <strong>Ecological Informatics group</strong>. We are working on biodiversity-related aspects including the analyses and modelling of species distributions,
+              analysis of biodiversity change and the development of indicators, standards in biodiversty data, development of workflows for processing biodiversity data, and contributions at the
+              science-policy interface. A topic key to the working group is centred biological invasions, which describes the introduction and spread of alien (non-native) species and the impacts they pose.
+              The core of our work is based on four pillars:
+              <ul>
+                <li>Data analysis and modelling:</li>
+                <li>Data science:</li>
+                <li>Indicators:</li>
+                <li>Science-policy:</li>
+              </ul> 
+            </p>
           </div>
         </div>
        </div>
@@ -261,8 +281,8 @@
           <p>The overall aim of PredictiveAliens is to improve our understanding and predictions of biological invasions over large temporal and spatial scales. To achieve this, we will first quantify flows of alien species, driver dynamics and biases globally. We will build new databases of alien species spread to investigate the flows of spread. We will adapt models from economics to simulate networks of driver dynamics, which in turn can be used to investigate the underlying mechanisms of alien species spread. To account for biases, we will develop new measures for quantifying data gaps and uncertainties, which will be included in the analysis. </p>
           <p>The project consists of a DFG Heisenberg position (Hanno Seebens), a postdoc (Philipp Laeseke), and a phd position (Manuela Gómez-Suárez).</p></div>
           <div class="profile-extra">
-            <p><strong>Duration:</strong> 01.01.2024 - 31.12.2026
-            <p><strong>Funder:</strong> German Research Foundation
+            <p><strong>Duration:</strong> 01.01.2024 - 31.12.2026</p>
+            <p><strong>Funder:</strong> German Research Foundation</p>
           </div>
           <div class="funding">
             <img src="Photos/dfg_logo_englisch_blau_en.jpg" alt="DFG" />
@@ -276,16 +296,15 @@
       <div class="profile-card">
         <div>
           <div class="profile-links">
-          <p><a href="https://b-cubed.eu/" target="_blank">B-Cubed</a> aims to address this challenge by transforming biodiversity monitoring into an agile and responsive process. The project works closely with existing biodiversity 
-            initiatives to identify and address policy needs. It leverages the concept of data cubes to standardise access to biodiversity data using the Essential Biodiversity 
-            Variables framework. These cubes are the basis for models and indicators of past, current and future biodiversity. The models will be accessible to users in real-time 
-            and on-demand in a cloud computing environment, delivering information on biodiversity status and change. To ensure its results can be reused, the project creates exemplar 
-            automated workflows for modelling using biodiversity data cubes and for the calculation of change indicators. The effectiveness of B-Cubed’s solutions is demonstrated in 
-            four case studies, varying in geographic extent, biodiversity richness and data availability.</p>
+          <p>B-Cubed leverages the concept of data cubes to standardise access to biodiversity data using the Essential Biodiversity Variables framework. These cubes, provided by <a href="https://gbif.org" target="_blank">GBIF</a>, are the basis for models and indicators of past, current and future biodiversity. The models will be accessible to users in real-time and on-demand in a cloud computing 
+            environment, delivering information on biodiversity status and change. To ensure its results can be reused, the project creates exemplar automated workflows for 
+            modelling using biodiversity data cubes and for the calculation of change indicators. The effectiveness of B-Cubed’s solutions is demonstrated in four case studies, 
+            varying in geographic extent, biodiversity richness and data availability.</p>
           </div>
           <div class="profile-extra">
-            <p><strong>Duration:</strong> 
-            <p><strong>Funder:</strong> EU Horizon Europe
+            <p><strong>Website:</strong>       <a href="https://b-cubed.eu/" target="_blank">B-Cubed</a></p>
+            <p><strong>Duration:</strong> </p>
+            <p><strong>Funder:</strong> EU Horizon Europe</p>
           </div>
           <div class="funding">
             <img src="eu.png" alt="European Union" />
@@ -752,7 +771,6 @@
           <div class="profile-extra">
             <p><strong>Dataset:</strong> <a href="https://zenodo.org/records/10039630">https://zenodo.org/records/10039630</a>
             <p><strong>Publications:</strong>  
-              Introduction: <br>
               <ul>
                 <li>Seebens H, Blackburn TM, Dyer EE, Genovesi P, Hulme PE, Jeschke JM, Pagad S, Pyšek P, van Kleunen M, Winter M, Arianoutsou M, Bacher S, Blasius B, Brundu G, Capinha C, Celesti-Grapow L, Dawson W, Dullinger S, Fuentes N, Jäger H, Kartesz J, Kenis M, Kreft H, Kühn I, Lenzner B, Liebhold A, Mosena A, Moser D, Nishino M, Pearman D, Pergl J, Rabitsch W, Rojas-Sandoval J, Roques A, Rorke S, Rossinelli S, Roy HE, Scalera R, Schindler S, Štajerová K, Tokarska-Guzik B, van Kleunen M, Walker K, Weigelt P, Yamanaka T, Essl F (2017b) No saturation in the accumulation of alien species worldwide. <i>Nature Communications</i> 8: 14435. <a href="https://doi.org/10.1038/ncomms14435">https://doi.org/10.1038/ncomms14435</a></li>
               </ul>
@@ -772,12 +790,12 @@
       <div class="profile-card">
         <div>
           <div class="profile-links">
-          <p>The DASCO workflow combines information from checklists of alien species with occurrences records obtained from GBIF and OBIS to identify alien populations at local scale. 
+          <p>The DASCO workflow combines information from regional checklists of alien species with occurrences records obtained from GBIF and OBIS to identify alien populations at local scale. 
             It takes checklist dataset like SInAS and extracts coordinate-based occurrence records for the listed regions, where the respetive species are listed as being alien. This resulted
             in a collection of occurrence records of alien populations, which can be used for analysis and modelling and reaggregation.</p>
           </div>
           <div class="profile-extra">
-            <p><strong>Dataset (a version using SInAS 2.4.1):</strong> <a href="https://zenodo.org/records/6457952">https://zenodo.org/records/6457952</a>
+            <p><strong>Dataset (a version based on SInAS 2.4.1):</strong> <a href="https://zenodo.org/records/6457952">https://zenodo.org/records/6457952</a>
             <p><strong>Workflow:</strong> <a href="https://github.com/hseebens/DASCOworkflow">https://github.com/hseebens/DASCOworkflow</a>
             <p><strong>Publications:</strong>  
               <ul>
