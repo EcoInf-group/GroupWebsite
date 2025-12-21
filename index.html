@@ -37,30 +37,55 @@
     }
 
     nav {
-      width: 250px;
-      background-color: var(--secondary);
-      border-radius: 12px;
-      padding: 1rem 1.2rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      margin: 1rem;
-    }
+  width: 260px;
+  background-color: var(--secondary);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  margin: 1.5rem;
+}
 
     nav h3 { margin: 1.4rem 0 0.5rem; font-size: 1rem; color: var(--primary); text-transform: uppercase; }
     nav ul { list-style: none; padding: 0; margin: 0; }
     nav li { margin-bottom: 0.4rem; }
-    nav button {
-      background: none;
-      border: none;
-      padding: 0.3rem 0;
-      font: inherit;
-      color: #333;
-      cursor: pointer;
-      text-align: left;
-      width: 100%;
-      transition: color 0.2s ease;
-    }
-    nav button:hover { color: var(--accent); }
-    nav button.active { color: var(--accent); font-weight: 600; }
+
+nav button {
+  background: none;
+  border: none;
+  padding: 0.45rem 0.4rem;
+  margin: 0.15rem 0;
+  font: inherit;
+  font-size: 1.02rem;
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+    nav button:hover {
+  background-color: rgba(120, 162, 47, 0.12);
+  color: var(--primary);
+}
+
+nav button.active {
+  background-color: rgba(120, 162, 47, 0.2);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+nav li > strong {
+  display: block;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.02rem;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  font-weight: 700;
+  cursor: pointer;
+}
 
     main {
       flex: 1;
@@ -120,7 +145,8 @@
     .dropdown-container {
       display: none;
       list-style: none;
-      padding-left: 1rem; /* Indent a bit */
+  padding-left: 0.8rem;
+  margin-bottom: 0.6rem;
     }
 
     .dropdown-btn {
@@ -130,6 +156,7 @@
     .dropdown-btn.active {
       color: var(--accent);
     }
+    
 nav li > strong {
   color: var(--primary); /* same green as other text */
   font-weight: 600;      /* keep it bold */
