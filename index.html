@@ -150,6 +150,7 @@
       .profile-card img { width: 120px; }
       main { margin: 1rem 0.5rem; padding: 1.5rem; }
     }
+
     /* Hide the nested menu by default */
     .dropdown-container {
       display: none;
@@ -165,7 +166,21 @@
     .dropdown-btn.active {
       color: var(--accent);
     }
-    
+
+    .textbild {
+      float: right;
+      margin: 0 0 10px 15px; /* Abstand: links & unten */
+    }
+
+    .liste-ohne-punkte {
+      list-style: none;      /* entfernt die Punkte */
+      padding-left: 0;       /* entfernt Einzug */
+      margin: 0;
+    }
+    .liste-ohne-punkte li {
+      padding-left: 1.5em;   /* Einzug für Folgezeilen */
+      text-indent: -1.5em;  /* erste Zeile zurückziehen */
+    }
   </style>
 </head>
 <body>
@@ -185,17 +200,6 @@
         </ul>
       </li>
 
-      <li><strong>PROJECTS</strong>
-        <ul class="dropdown-container">
-          <li><button onclick="showSection('bcubed', this)">B-Cubed</button></li>
-          <li><button onclick="showSection('caspianII', this)">CASPIAN II</button></li>
-          <li><button onclick="showSection('bioimpact', this)">BioImpact</button></li>
-          <li><button onclick="showSection('predictivealiens', this)">PredictiveAliens</button></li>
-          <li><button onclick="showSection('robusttrends', this)">RobustTrends</button></li>
-          <li><button onclick="showSection('finished', this)">FINISHED</button></li>
-        </ul>
-      </li>
-
       <li><strong>GROUP MEMBERS</strong>
         <ul class="dropdown-container">
           <li><button onclick="showSection('hanno', this)">Hanno Seebens, Prof</button></li>
@@ -205,6 +209,17 @@
           <li><button onclick="showSection('tanara', this)">Tanara Renard</button></li>
           <li><button onclick="showSection('yanina', this)">Yanina Sica, PhD</button></li>
           <li><button onclick="showSection('alumni', this)">ALUMNI</button></li>
+        </ul>
+      </li>
+
+      <li><strong>PROJECTS</strong>
+        <ul class="dropdown-container">
+          <li><button onclick="showSection('bcubed', this)">B-Cubed</button></li>
+          <li><button onclick="showSection('caspianII', this)">CASPIAN II</button></li>
+          <li><button onclick="showSection('bioimpact', this)">BioImpact</button></li>
+          <li><button onclick="showSection('predictivealiens', this)">PredictiveAliens</button></li>
+          <li><button onclick="showSection('robusttrends', this)">RobustTrends</button></li>
+          <li><button onclick="showSection('finished', this)">FINISHED</button></li>
         </ul>
       </li>
 
@@ -237,15 +252,18 @@
       <div class="profile-card">
         <div>
           <div class="profile-links">
+            
+            <img src="Photos/GruppenfotoAG_220325_small.jpg" alt="Photo of Prof. Dr. Hanno Seebens" class="textbild" width="380"/>
+
             <p>Welcome to the website of the <strong>Ecological Informatics group</strong>. We are working on biodiversity-related aspects including the analyses and modelling of species distributions,
               analysis of biodiversity change and the development of indicators, standards in biodiversty data, development of workflows for processing biodiversity data, and contributions at the
               science-policy interface. A topic key to the working group is centred biological invasions, which describes the introduction and spread of alien (non-native) species and the impacts they pose.
               The core of our work is based on four pillars:
-              <ul>
-                <li>Data analysis and modelling:</li>
-                <li>Data science:</li>
-                <li>Indicators:</li>
-                <li>Science-policy:</li>
+              <ul class="liste-ohne-punkte">
+                <li><strong>Data analysis and modelling</strong>: We are conducting various statistical analyses often to explore spatial data like the distribution of species across regions or long-term trends of species numbers. Our focus on modelling is on the simulation of spreading dynamics of alien species by human means of transport or natural dispersal (e.g., Seebens et al. 2013, Bagnara et al. 2022).</li>
+                <li><strong>Data science</strong>: We are developing open source pipelines of data transformation and data harmonisation to merge data sets (e.g., Seebens et al. 2020, Seebens et al. 2022, Goméz-Suárez et al. 2025). This resulting data sets such as the FirstRecords (Seebens et al. 2017) or SInAS (Seebens et al. 2020, Goméz-Suárez et al. 2025) are maintained and updated by the group.</li>
+                <li><strong>Indicators</strong>: We are working on indicators and indeces of biodiversity change with a focus on indicators of biological invasions and data completeness. A key project in this regard is <a href="https://b-cubed.eu/" target="_blank">B-Cubed</a>, where we implement workflows to calculate biodiversity indeces from GBIF cubes.</li>
+                <li><strong>Science-policy</strong>: We are involved in various science-policy initiatives to turn our insights and data into policy-relevant and actionable information. A central involvement was the IPBES IAS assessment but includes several other assessments, policy briefs (Sica et al. 2024), task force memberships and a close collaboration with the IPBES Technical Support Unit of Data.</li>
               </ul> 
             </p>
           </div>
