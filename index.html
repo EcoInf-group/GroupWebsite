@@ -4,184 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="Ecological Informatics" content="Working group at Justus-Liebig-University Giessen working on biodiversity informatics, modelling, biological invasions, data analysis among others." />
   <title>Ecological Informatics – Justus-Liebig-University Giessen</title>
-  <style>
-    :root {
-      --primary: #2a5d34;
-      --secondary: #f0f5e6;
-      --accent: #78a22f;
-      --border: #cdd1c4;
-    }
-
-    body {
-      font-family: 'Open Sans', Arial, sans-serif;
-      margin: 0;
-      color: #333;
-      background-color: var(--secondary);
-    }
-
-    header {
-      background-color: var(--secondary);
-      color: var(--primary);
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    header h1 { margin: 0; font-size: 2.2rem; }
-    header p { margin: 0.5rem 0 0; font-style: italic; }
-
-    .container {
-      display: flex;
-      flex-direction: row;
-      min-height: calc(100vh - 150px);
-      margin-top: 0;
-    }
-
-    nav {
-      width: 220px;
-      background-color: var(--secondary);
-      border-radius: 14px;
-      padding: 1.5rem 1.6rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      margin: 1.5rem;
-    }
-
-    nav h3 { margin: 1.4rem 0 0.5rem; font-size: 1rem; color: var(--primary); text-transform: uppercase; }
-    nav ul { list-style: none; padding: 0; margin: 0; }
-    nav li { margin-bottom: 0.4rem; }
-
-    nav button {
-      background: none;
-      border: none;
-      padding: 0.15rem 0.4rem;
-      margin: 0.15rem 0;
-      font: inherit;
-      font-size: 1.02rem;
-      color: #333;
-      cursor: pointer;
-      text-align: left;
-      width: 100%;
-      border-radius: 6px;
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-
-    nav button:hover {
-      background-color: rgba(120, 162, 47, 0.12);
-      color: var(--primary);
-    }
-
-    nav button.active {
-      background-color: rgba(120, 162, 47, 0.2);
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    nav li > strong {
-      display: block;
-      margin-top: 1.4rem;
-      margin-bottom: 0.6rem;
-      font-size: 1.02rem;
-      letter-spacing: 0.08em;
-      color: var(--primary);
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    main {
-      flex: 1;
-      padding: 2.5rem 3rem;
-      background-color: #ffffffdd;
-      border-radius: 12px;
-      margin: 1rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
-
-    .content-section { 
-      max-width: 900px; 
-      animation: fadein 0.3s ease-in; 
-      display: none;
-    }
-    .content-section p, .content-section li { line-height: 1.6; }
-    @keyframes fadein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-    h2 { font-size: 1.8rem; padding-bottom: 0.5rem; margin-top: 0; color: var(--primary); }
-
-    .profile-card {
-      display: flex;
-      flex-direction: row;
-      gap: 1.5rem;
-      background-color: var(--secondary);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 900px) {.profile-card img { width: 160px; } }
-    .profile-links a:hover { text-decoration: underline; }
-    .profile-links a {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 500;
-    }
-    .profile-links p a + a {
-      margin-left: 1rem;
-    }
-
-    .profile-extra { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
-
-    .funding { margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-    .funding img { height: 40px; filter: grayscale(50%); opacity: 0.9; }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: #555;
-      background-color: var(--secondary);
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 900px) {
-      .container { flex-direction: column; }
-      nav { width: 100%; border-right: none; border-bottom: 1px solid var(--border); margin: 0.5rem 1rem; }
-      .profile-card { flex-direction: column; align-items: center; text-align: center; }
-      .profile-card img { width: 120px; }
-      main { margin: 1rem 0.5rem; padding: 1.5rem; }
-    }
-
-    /* Hide the nested menu by default */
-    .dropdown-container {
-      display: none;
-      list-style: none;
-      padding-left: 0.8rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .dropdown-btn {
-      font-weight: 600;
-    }
-
-    .dropdown-btn.active {
-      color: var(--accent);
-    }
-
-    .textbild {
-      float: right;
-      margin: 0 0 10px 15px; /* Abstand: links & unten */
-    }
-
-    .liste-ohne-punkte {
-      list-style: none;      /* entfernt die Punkte */
-      padding-left: 0;       /* entfernt Einzug */
-      margin: 0;
-    }
-    .liste-ohne-punkte li {
-      padding-left: 1.5em;   /* Einzug für Folgezeilen */
-      text-indent: -1.5em;  /* erste Zeile zurückziehen */
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -191,78 +14,80 @@
 </header>
 
 <div class="container">
-  <nav>
-    <ul>
-      <li><strong>HOME</strong>
-        <ul class="dropdown-container">
-          <li><button onclick="showSection('home-content', this)">About</button></li>
-          <li><button onclick="showSection('codeofconduct', this)">Code of conduct</button></li>
-        </ul>
-      </li>
+  <div id="nav">
+    <nav>
+  <ul>
+    <li><strong>HOME</strong>
+      <ul class="dropdown-container">
+        <li><button onclick="showSection('home-content', this)">About</button></li>
+        <li><button onclick="showSection('codeofconduct', this)">Code of conduct</button></li>
+      </ul>
+    </li>
 
-      <li><strong>GROUP MEMBERS</strong>
-        <ul class="dropdown-container">
-          <li><button onclick="showSection('hanno', this)">Hanno Seebens, Prof</button></li>
-          <li><button onclick="showSection('manuela', this)">Manuela Goméz-Suárez</button></li>
-          <li><button onclick="showSection('philipp', this)">Philipp Laeseke, Dr</button></li>
-          <li><button onclick="showSection('shawn', this)">Shawn Dove, PhD</button></li>
-          <li><button onclick="showSection('tanara', this)">Tanara Renard</button></li>
-          <li><button onclick="showSection('yanina', this)">Yanina Sica, PhD</button></li>
-          <li><button onclick="showSection('alumni', this)">ALUMNI</button></li>
-        </ul>
-      </li>
+    <li><strong>GROUP MEMBERS</strong>
+      <ul class="dropdown-container">
+        <li><button onclick="showSection('hanno', this)">Hanno Seebens, Prof</button></li>
+        <li><button onclick="showSection('manuela', this)">Manuela Goméz-Suárez</button></li>
+        <li><button onclick="showSection('philipp', this)">Philipp Laeseke, Dr</button></li>
+        <li><button onclick="showSection('shawn', this)">Shawn Dove, PhD</button></li>
+        <li><button onclick="showSection('tanara', this)">Tanara Renard</button></li>
+        <li><button onclick="showSection('yanina', this)">Yanina Sica, PhD</button></li>
+        <li><button onclick="showSection('alumni', this)">ALUMNI</button></li>
+      </ul>
+    </li>
 
-      <li><strong>PROJECTS</strong>
-        <ul class="dropdown-container">
-          <li><button onclick="showSection('bcubed', this)">B-Cubed</button></li>
-          <li><button onclick="showSection('caspianII', this)">CASPIAN II</button></li>
-          <li><button onclick="showSection('bioimpact', this)">BioImpact</button></li>
-          <li><button onclick="showSection('predictivealiens', this)">PredictiveAliens</button></li>
-          <li><button onclick="showSection('robusttrends', this)">RobustTrends</button></li>
-          <li><button onclick="showSection('finished', this)">FINISHED</button></li>
-        </ul>
-      </li>
+    <li><strong>PROJECTS</strong>
+      <ul class="dropdown-container">
+        <li><button onclick="showSection('bcubed', this)">B-Cubed</button></li>
+        <li><button onclick="showSection('caspianII', this)">CASPIAN II</button></li>
+        <li><button onclick="showSection('bioimpact', this)">BioImpact</button></li>
+        <li><button onclick="showSection('predictivealiens', this)">PredictiveAliens</button></li>
+        <li><button onclick="showSection('robusttrends', this)">RobustTrends</button></li>
+        <li><button onclick="showSection('finished', this)">FINISHED</button></li>
+      </ul>
+    </li>
 
-      <li><strong>PUBLICATIONS</strong>
-        <ul class="dropdown-container">
-          <li><button onclick="showSection('publications', this)">View Publications</button></li>
-        </ul>
-      </li>
+    <li><strong>PUBLICATIONS</strong>
+      <ul class="dropdown-container">
+        <li><button onclick="showSection('publications', this)">View Publications</button></li>
+      </ul>
+    </li>
 
-      <li><strong>DATASETS/WORKFLOWS</strong>
-        <ul class="dropdown-container">
-          <li><button onclick="showSection('sinas', this)">SInAS</button></li>
-          <li><button onclick="showSection('firstrecords', this)">FirstRecords</button></li>
-          <li><button onclick="showSection('dasco', this)">DASCO</button></li>
-        </ul>
-      </li>
+    <li><strong>DATASETS/WORKFLOWS</strong>
+      <ul class="dropdown-container">
+        <li><button onclick="showSection('sinas', this)">SInAS</button></li>
+        <li><button onclick="showSection('firstrecords', this)">FirstRecords</button></li>
+        <li><button onclick="showSection('dasco', this)">DASCO</button></li>
+      </ul>
+    </li>
 
-      <li><strong>LEGAL</strong>
-        <ul class="dropdown-container">
-          <li><button onclick="showSection('impressum', this)">Impressum</button></li>
-          <li><button onclick="showSection('datenschutz', this)">Datenschutz</button></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+    <li><strong>LEGAL</strong>
+      <ul class="dropdown-container">
+        <li><button onclick="showSection('impressum', this)">Impressum</button></li>
+        <li><button onclick="showSection('datenschutz', this)">Datenschutz</button></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+  </div>
 
   <main>
     <section id="home-content" class="content-section" style="display:block;">
-      <h2>Welcome</h2>
+      <h2>Welcome to the website of the Ecological Informatics group</h2>
       <div class="profile-card">
         <div>
           <div class="profile-links">
             
             <img src="Photos/GruppenfotoAG_220325_small.jpg" alt="Photo of Prof. Dr. Hanno Seebens" class="textbild" width="380"/>
 
-            <p>Welcome to the website of the <strong>Ecological Informatics group</strong>. We are working on biodiversity-related aspects including the analyses and modelling of species distributions,
-              analysis of biodiversity change and the development of indicators, standards in biodiversty data, development of workflows for processing biodiversity data, and contributions at the
-              science-policy interface. A topic key to the working group is centred biological invasions, which describes the introduction and spread of alien (non-native) species and the impacts they pose.
+            <p>We are an inter-disciplinary research group working on biodiversity-related aspects including the distribution of species on Earth, the spread of species by humans and long-term trends of biodiversity change. 
+              A key topic for the group represents biological invasions, which describes the introduction and spread of alien (non-native) species and the impacts they pose.
               <br>
               <br>
               The core of our work is based on four pillars:
               <ul class="liste-ohne-punkte">
-                <li><strong>Data analysis and modelling</strong>: We are conducting various statistical analyses often to explore spatial data like the distribution of species across regions or long-term trends of species numbers. Our focus on modelling is on the simulation of spreading dynamics of alien species by human means of transport or natural dispersal (e.g., Seebens et al. 2013, Bagnara et al. 2022).</li>
+                <li><strong>Data analysis and modelling</strong>: We are conducting various statistical analyses often to explore spatial data like the distribution of species across regions or long-term trends of species numbers. Our focus on modelling is on the simulation of spreading dynamics of alien species by means of human transport or natural dispersal (e.g., Seebens et al. 2013, Bagnara et al. 2022).</li>
                 <li><strong>Data science</strong>: We are developing open source pipelines of data transformation and data harmonisation to merge data sets (e.g., Seebens et al. 2020, Seebens et al. 2022, Goméz-Suárez et al. 2025). This resulting data sets such as the FirstRecords (Seebens et al. 2017) or SInAS (Seebens et al. 2020, Goméz-Suárez et al. 2025) are maintained and updated by the group.</li>
                 <li><strong>Indicators</strong>: We are working on indicators and indeces of biodiversity change with a focus on indicators of biological invasions and data completeness. A key project in this regard is <a href="https://b-cubed.eu/" target="_blank">B-Cubed</a>, where we implement workflows to calculate biodiversity indeces from GBIF cubes.</li>
                 <li><strong>Science-policy</strong>: We are involved in various science-policy initiatives to turn our insights and data into policy-relevant and actionable information. A central involvement was the <a href="https://www.ipbes.net/ias" target="_blank">IPBES IAS assessment</a> but includes several other assessments, policy briefs (Sica et al. 2024), task force memberships and a close collaboration with the IPBES Technical Support Unit of Data.</li>
@@ -586,7 +411,7 @@
       </div>
     </section>
 
-    <section id="publications" class="content-section">
+        <section id="publications" class="content-section">
       <h2>Publications</h2>
       <!-- Style as Ecology Letters but with journal names in italics-->
 
@@ -757,6 +582,7 @@
     </section>
 
 
+
     <section id="sinas" class="content-section">
       <h2>Standardising and Integrating Alien Species checklists (SInAS)</h2>
       <div class="profile-card">
@@ -894,19 +720,12 @@
       dem deutschen Urheberrecht.
       </p>
 
-      </body>
-      </html>
-
     </section>
-
-
-
 
 
 
     <section id="datenschutz" class="content-section">
       <h2>Datenschutzerklärung</h2>
-      <body>
 
       <h3>1. Verantwortlicher</h3>
       <p>
@@ -1019,8 +838,6 @@
       Wir verwenden geeignete technische und organisatorische Maßnahmen, um Ihre Daten zu schützen.
       </p>
 
-      </body>
-      </html>
     </section>
   </main>
 </div>
@@ -1033,17 +850,7 @@
 
 
 <script>
-  function showSection(id, btn) {
-    const section = document.getElementById(id);
-    if (!section) { console.warn('No section found with id:', id); return; }
-    document.querySelectorAll('.content-section').forEach(s => s.style.display = 'none');
-    section.style.display = 'block';
-    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  }
-</script>
 
-<script>
   const dropdownBtns = document.querySelectorAll('.dropdown-btn');
 
   dropdownBtns.forEach(btn => {
@@ -1058,18 +865,6 @@
     });
   });
 
-  function showSection(sectionId, btn) {
-    // hide all sections
-    document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
-    // remove active class from all nav buttons
-    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-    // show current section
-    document.getElementById(sectionId).style.display = 'block';
-    btn.classList.add('active');
-  }
-</script>
-
-<script>
   // Select all parent menu items (the <strong> elements)
   const menuHeaders = document.querySelectorAll('nav li > strong');
 
@@ -1086,17 +881,46 @@
   });
 
   // Function to show content sections
-  function showSection(sectionId, btn) {
-    // Hide all sections
-    document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
-    // Show selected section
-    const section = document.getElementById(sectionId);
-    if (section) section.style.display = 'block';
+function showSection(sectionId, btn) {
+  // Alle Sections verstecken
+  document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
 
-    // Update active button styles
-    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-  }
+  // Gewählte Section anzeigen
+  const section = document.getElementById(sectionId);
+  if (section) section.style.display = 'block';
+
+  // Aktive Buttons markieren
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
+function initNav() {
+  const menuHeaders = document.querySelectorAll('nav li > strong');
+
+  menuHeaders.forEach(header => {
+    header.style.cursor = 'pointer';
+    header.addEventListener('click', () => {
+      const dropdown = header.nextElementSibling;
+      if (dropdown) {
+        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+      }
+    });
+  });
+}
+
+function includeHTML(targetId, file, callback) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) throw new Error("Datei nicht gefunden: " + file);
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById(targetId).innerHTML = data;
+      if (callback) callback(); // Dropdowns initialisieren
+    })
+    .catch(error => console.error(error));
+}
+ // Nav einfügen und Dropdowns aktivieren
+//includeHTML("nav", "includes/nav.html", initNav);
 </script>
 
 </body>

@@ -1,0 +1,177 @@
+:root {
+  --primary: #2a5d34;
+  --secondary: #f0f5e6;
+  --accent: #78a22f;
+  --border: #cdd1c4;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  color: #333;
+  background-color: var(--secondary);
+}
+
+header {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+header h1 { margin: 0; font-size: 2.2rem; }
+header p { margin: 0.5rem 0 0; font-style: italic; }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 150px);
+  margin-top: 0;
+}
+
+nav {
+  width: 220px;
+  background-color: var(--secondary);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  margin: 1.5rem;
+}
+
+nav h3 { margin: 1.4rem 0 0.5rem; font-size: 1rem; color: var(--primary); text-transform: uppercase; }
+nav ul { list-style: none; padding: 0; margin: 0; }
+nav li { margin-bottom: 0.4rem; }
+
+nav button {
+  background: none;
+  border: none;
+  padding: 0.15rem 0.4rem;
+  margin: 0.15rem 0;
+  font: inherit;
+  font-size: 1.02rem;
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav button:hover {
+  background-color: rgba(120, 162, 47, 0.12);
+  color: var(--primary);
+}
+
+nav button.active {
+  background-color: rgba(120, 162, 47, 0.2);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+nav li > strong {
+  display: block;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.02rem;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  background-color: #ffffffdd;
+  border-radius: 12px;
+  margin: 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.content-section { 
+  max-width: 900px; 
+  animation: fadein 0.3s ease-in; 
+  display: none;
+}
+.content-section p, .content-section li { line-height: 1.6; }
+@keyframes fadein { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+h2 { font-size: 1.8rem; padding-bottom: 0.5rem; margin-top: 0; color: var(--primary); }
+
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  background-color: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {.profile-card img { width: 160px; } }
+.profile-links a:hover { text-decoration: underline; }
+.profile-links a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+.profile-links p a + a {
+  margin-left: 1rem;
+}
+
+.profile-extra { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+
+.funding { margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.funding img { height: 40px; filter: grayscale(50%); opacity: 0.9; }
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: var(--secondary);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .container { flex-direction: column; }
+  nav { width: 100%; border-right: none; border-bottom: 1px solid var(--border); margin: 0.5rem 1rem; }
+  .profile-card { flex-direction: column; align-items: center; text-align: center; }
+  .profile-card img { width: 120px; }
+  main { margin: 1rem 0.5rem; padding: 1.5rem; }
+}
+
+/* Hide the nested menu by default */
+.dropdown-container {
+  display: none;
+  list-style: none;
+  padding-left: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.dropdown-btn {
+  font-weight: 600;
+}
+
+.dropdown-btn.active {
+  color: var(--accent);
+}
+
+.textbild {
+  float: right;
+  margin: 0 0 10px 15px; /* Abstand: links & unten */
+  border-radius: 15px;
+}
+
+.liste-ohne-punkte {
+  list-style: none;      /* entfernt die Punkte */
+  padding-left: 0;       /* entfernt Einzug */
+  margin: 0;
+}
+.liste-ohne-punkte li {
+  padding-left: 1.5em;   /* Einzug für Folgezeilen */
+  text-indent: -1.5em;  /* erste Zeile zurückziehen */
+}
