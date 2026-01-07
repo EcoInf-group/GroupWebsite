@@ -48,7 +48,8 @@
 
         <li><strong>PUBLICATIONS</strong>
           <ul class="dropdown-container">
-            <li><button onclick="showSection('publications', this)">View Publications</button></li>
+            <li><button onclick="showSection('scientificarticles', this)">Scientific articles</button></li>
+            <li><button onclick="showSection('otherpublications', this)">Other publications</button></li>
           </ul>
         </li>
 
@@ -101,7 +102,8 @@
 
     <section id="alumni" class="content-section"></section>
 
-    <section id="publications" class="content-section"></section>
+    <section id="scientificarticles" class="content-section"></section>
+    <section id="otherpublications" class="content-section"></section>
 
     <section id="sinas" class="content-section"></section>
 
@@ -249,10 +251,13 @@ function initNav() {
     .then(html => document.getElementById("bcubed").innerHTML = html);
 
 // Publications ---------------------------------------------------------------    
-  fetch("sections/publications.html")
+  fetch("sections/scientificarticles.html")
     .then(r => r.text())
-    .then(html => document.getElementById("publications").innerHTML = html);
+    .then(html => document.getElementById("scientificarticles").innerHTML = html);
     
+  fetch("sections/otherpublications.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("otherpublications").innerHTML = html);
     
 // Datasets ---------------------------------------------------------------    
   fetch("sections/sinas.html")
