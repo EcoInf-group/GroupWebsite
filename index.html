@@ -20,6 +20,7 @@
         <li><strong>HOME</strong>
           <ul class="dropdown-container">
             <li><button onclick="showSection('home-content', this)">About</button></li>
+            <li><button onclick="showSection('address-content', this)">Address</button></li>
           </ul>
         </li>
 
@@ -81,6 +82,8 @@
 
   <main>
     <section id="home-content" class="content-section" style="display:block;"></section>
+
+    <section id="address-content" class="content-section" style="display:block;"></section>
 
     <section id="predictivealiens" class="content-section"></section>
 
@@ -201,37 +204,67 @@ function initNav() {
       })
       .catch(error => console.error(error));
   }
-
+function revealEmails() {
+  document.querySelectorAll('.email').forEach(el => {
+    const user = el.dataset.user;
+    const domain = el.dataset.domain;
+    const address = `${user}@${domain}`;
+    el.innerHTML = `<a href="mailto:${address}">${address}</a>`;
+  });
+}
   // fetch section content
 
   fetch("sections/home.html")
     .then(r => r.text())
     .then(html => document.getElementById("home-content").innerHTML = html);
 
+  fetch("sections/address-content.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("address-content").innerHTML = html);
+
 // People ---------------------------------------------------------------    
   fetch("sections/hannoseebens.html")
-    .then(r => r.text())
-    .then(html => document.getElementById("hannoseebens").innerHTML = html);
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("hannoseebens").innerHTML = html;
+    revealEmails();
+  });
 
   fetch("sections/manuela.html")
     .then(r => r.text())
-    .then(html => document.getElementById("manuela").innerHTML = html);
+    .then(html => {
+      document.getElementById("manuela").innerHTML = html;
+      revealEmails();
+  });
+
 
   fetch("sections/philipp.html")
     .then(r => r.text())
-    .then(html => document.getElementById("philipp").innerHTML = html);
+    .then(html => {
+      document.getElementById("philipp").innerHTML = html;
+      revealEmails();
+  });
 
   fetch("sections/tanara.html")
     .then(r => r.text())
-    .then(html => document.getElementById("tanara").innerHTML = html);
+    .then(html => {
+      document.getElementById("tanara").innerHTML = html;
+      revealEmails();
+  });
 
   fetch("sections/shawn.html")
     .then(r => r.text())
-    .then(html => document.getElementById("shawn").innerHTML = html);
+    .then(html => {
+      document.getElementById("shawn").innerHTML = html;
+      revealEmails();
+  });
 
   fetch("sections/yanina.html")
     .then(r => r.text())
-    .then(html => document.getElementById("yanina").innerHTML = html);
+    .then(html => {
+      document.getElementById("yanina").innerHTML = html;
+      revealEmails();
+  });
 
   fetch("sections/alumni.html")
     .then(r => r.text())

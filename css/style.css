@@ -29,6 +29,11 @@ header p { margin: 0.5rem 0 0; font-style: italic; }
   margin-top: 0;
 }
 
+.email a {
+  color: #000;          /* schwarz */
+  text-decoration: none; /* kein Unterstrich */
+}
+
 nav {
   width: 220px;
   background-color: var(--secondary);
